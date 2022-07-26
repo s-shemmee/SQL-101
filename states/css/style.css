@@ -1,0 +1,149 @@
+/* 
+Author: Chris Castiglione
+Project: Page Layout
+*/
+
+
+/* BASE STYLES */
+
+body {
+     font-family: Helvetica, Arial, sans-serif;
+     font-size: 12px;
+     color: black; 
+     line-height: 1.4;
+     padding: 10px;
+     background: url('../images/pattern1.png'); /* by default background images repeat */
+}
+
+
+h1 {
+  margin: 20px 2px;
+  font-size: 70px;
+  color: #FFFFFF;
+  letter-spacing: -3px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2),-1px -1px 3px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  margin: 2px;
+  font-size: 32px;
+  color: #333;
+  cursor: pointer; /*adds a cursor to the h2 so that it looks more clickable */
+}
+  h2:hover {
+    color: #000;
+  }
+
+a {
+     text-decoration: none;
+     color: #333;
+}
+
+/* Layout */
+
+#container {
+     margin: 0 auto;
+     width: 500px;
+     color: #333;
+}
+
+#header {
+     padding: 20px; 
+}
+
+#main {
+     background: white;
+     padding: 20px;
+}
+
+#footer {
+     background: #FF6666; 
+     padding: 20px;
+     text-align: right;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+
+
+
+/* FORM STYLES */
+
+form {
+     width:400px;
+     padding:14px;
+}
+label{
+     display:block;
+     font-weight:bold;
+     text-align:right;
+     width:140px;
+     float:left;
+}
+input, textarea{
+     float:left;
+     font-size:12px;
+     padding:4px 2px;
+     border:solid 1px #aacfe4;
+     width:200px;
+     margin:2px 0 20px 10px;
+}
+button.btn {
+     margin-left: 150px;
+}
+
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #bbbbbb;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #a2a2a2;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+ 
