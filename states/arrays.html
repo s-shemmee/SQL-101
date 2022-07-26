@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions</title>
+	<script type="text/javascript">
+		
+
+			//PUSH - add new elements to an array 
+			var sports = ['soccer', 'baseball'];
+			var total = sports.push('football', 'swimming');
+
+			console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
+			console.log(total);  // 4
+
+
+			//POP - remove the last element of an array
+			var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+			console.log(myFish); // ['angel', 'clown', 'mandarin', 'sturgeon']
+			var popped = myFish.pop();
+			console.log(myFish); // ['angel', 'clown', 'mandarin' ] 
+			console.log(popped); // 'sturgeon'
+
+
+			//SHIFT - remove the first element of an array 
+			var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+			console.log('myFish before: ' + myFish);
+			// "myFish before: angel,clown,mandarin,surgeon"
+
+			var shifted = myFish.shift(); 
+			console.log('myFish after: ' + myFish); 
+			// "myFish after: clown,mandarin,surgeon" 
+			console.log('Removed this element: ' + shifted); 
+			// "Removed this element: angel"
+
+
+			//REVERSE - reverse the array
+			var myArray = ['one', 'two', 'three'];
+			myArray.reverse(); 
+			console.log(myArray) // ['three', 'two', 'one']
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

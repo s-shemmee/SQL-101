@@ -1,0 +1,50 @@
+/* 
+
+Author: 
+Project: 
+
+*/
+
+/* Project Hacks */
+
+/* BOX MODEL HACK */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* clear fix */
+.clear:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+/* General Styles */
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 1.4;
+	color: #000000; 
+}
+
+h1, h2, h3 {
+	padding: 10px 0 10px 0;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 22px;
+}

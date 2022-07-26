@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<!-- Add some meta tags for good SEO -->
+    	<meta name="description" content="Happy Hour App - How about a drink!?">
+    	<meta name="keywords" content="happy hour, drink, beers">
+	
+		<title>Happy Hour</title>
+		
+		<!-- normalize.css resets the browsers -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- Our styles come in from the file style.css -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="container">
+			
+			<div id="header">
+				<h1>How About You Get A Drink At:</h1>
+			</div>
+			<h6 id="action">
+			<!-- THE MAP & DATA GET PRINTED HERE -->
+			<h6>
+
+		</div><!-- #container --> 
+		
+		<script>
+			/* JAVASCRIPT 
+
+				Let's put the JavaScript down here as the last item in the body. Now that we are learning more, this is actually the best place to put it. And it ensures that all of our tags have loaded before we manipulate them with JS. 
+			*/
+
+			/* ARRAYS 
+
+				...are lists seperated by commas. Check out this array for names of bars... */
+
+			// Our List of Bars
+			var bars = [
+				'Siggys',
+				'Blind Tiger',
+				'Zum Schneider',
+				'One Month',
+				'Home Sweet Home',
+				'Union Pool',
+				'The Wren'
+			];
+
+
+			/* TEST YOUR ARRAY
+
+				Uncomment the line below (by removing the two // slashes). That code will print the first item in the "bars" array. 
+
+				In arrays the first item is "0", the second is "1", and so on. It's weird, but you'll get used to it */
+
+					//document.write(bars[0]);
+
+			/* RANDOM NUMBER  
+
+				 The line below (if uncommented) will print a random number, but it will have a hell of a lot of decimal places and might look like 0.23402343443
+
+						document.write(Math.random(Math.random());
+
+				So what we need to do is use Math.floor to round it (floor rounds it up). And then we multiply it by the number of items in the "bars" list. (Because, we don't want to pick a TOTALLY random number like 103. Is there a list item number 103 in the bars list? No, there are only 4 items. Go count yourself! (... and remember it starts at 0). 
+			
+			*/	
+			var randomNumber = Math.floor(Math.random()*bars.length);
+			var barname = bars[randomNumber];
+
+			/* MAP 
+
+				This map comes from GOOGLE MAPS. It's totally hacked together and the results are only accurate SOME of the time (Actually, I'm guessing they will be less accurate if you are not in NYC, as it queries with local Geolocation, SO... change the bar names to something local and give it a try yourself!). 
+
+				Whether it's totally accurate or not... it does illustrate a VERY BASIC API call! And that's awesome.
+
+				See what an API call is? You reach out to Google and submit them some data. "Hey I'm looking for a map of a bar called "Blind Tiger", and then it returns that map to you. BOOM. Simple API call. 
+
+			*/
+			var map = "<iframe width='425' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://maps.google.com/maps?ie=UTF8&amp;q=" + barname +  "&amp;fb=1&amp;gl=us&amp;hq=" + barname + "&amp;spn=0.006295,0.006295&amp;output=embed'></iframe>";
+
+
+			/* FINALLY
+
+				 Well we have all of our processing complete up above. Let's print it out to the screen. Where? Well, let's print it between the <h6 id="action"></h6> tags. */
+
+			document.getElementById("action").innerHTML = barname + map;
+
+			
+			</script>
+
+	</body>
+</html>

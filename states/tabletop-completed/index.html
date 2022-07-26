@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Oprah Likes You. And so do other people.</title>
+
+		<style>
+			
+			/* Basic CSS comment */	
+			body {
+				background: #BBB;
+				color: white;
+				width: 960px;
+				margin: 0 auto;
+			}
+
+			h1 {
+				font-size: 80px;
+				color: #333	;
+			}
+
+		</style>
+
+		<script type="text/javascript" src="js/tabletop.js"></script>
+
+
+		<script type="text/javascript">
+		  window.onload = function() { init() };
+
+		  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/17jplPtkrPNi3lFBD4ho9POAqI5OPzDyB3Hj4jlLtelA/pubhtml';
+
+		  function init() {
+		    Tabletop.init( { key: public_spreadsheet_url,
+		                     callback: showInfo,
+		                     simpleSheet: true } )
+		  }
+
+		  function showInfo(data, tabletop) {
+
+		    var container = document.querySelector(".container");
+		  	container.innerHTML = "";
+
+		    data.forEach(function(item){
+		    		console.log(item.Name);
+		    		container.innerHTML += item.Name;
+
+		    });
+
+
+
+		  }
+		</script>
+
+	</head>
+ 	
+	<body>
+		<div class="container"></div>
+	</body>
+
+</html>

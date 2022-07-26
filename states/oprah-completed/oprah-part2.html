@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Oprah Likes You. And so do other people.</title>
+
+		<style>
+			
+			/* Basic CSS comment */	
+			body {
+				background: #BBB;
+				color: white;
+				width: 960px;
+				margin: 0 auto;
+			}
+
+			h1 {
+				font-size: 80px;
+				color: #333	;
+			}
+
+		</style>
+
+		<script> 
+		
+      var username = prompt("Hello, Who are you?");
+      
+      var cars = new Array("BMW", "Saab", "Maserati");
+  		
+  		/* 1. randomize the car */
+  		var randomNumber = Math.floor(Math.random()*cars.length);
+			var randomCar = cars[randomNumber];
+
+      if(username === "Oprah")  {
+      
+       document.write("<h1>Hello " + username + " you won a " + randomCar + " !!!!!</h1> ");
+     
+     /* 2. use else if  */
+      } else if(username === "Chris") {
+      	document.write("");
+      }
+
+      else {
+        document.write("<h1>Hello " + username + "!</h1>");
+        
+      }
+
+			
+		</script>
+
+	</head>
+ 	
+	<body>
+		<img src="oprah.jpg" alt="Oprah">
+	</body>
+</html>

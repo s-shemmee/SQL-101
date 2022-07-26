@@ -1,0 +1,28 @@
+
+body {
+	background: #FF6600; /* hexadecimal number */
+}
+
+#header {
+	color: white;
+	height: 40px;
+}
+
+
+#container {
+	/* center content on your page */
+	margin: auto;
+	width: 600px;
+}
+
+h1 {
+	font-size: 12px;
+	font-family: fantasy;
+}
+
+h6 {
+	font-size: 70px;
+	color: #FFF;
+	margin: 0px;
+	text-shadow: #333 1px 1px;
+}

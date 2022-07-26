@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS</title>
+		<link rel="stylesheet" href="css/main.css">
+		<script>
+
+				// var diff = function() {
+				// 			a = 1 + 1;
+				// };
+
+				// console.log(diff);
+
+
+
+				//MAP 
+				//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+				var numbers = [1, 4, 9];
+				var roots = numbers.map(Math.sqrt);
+				//console.log(roots);
+				// roots is now [1, 2, 3], numbers is still [1, 4, 9]
+
+
+				var kvArray = [{key:1, value:10}, {key:2, value:20}, {key:3, value: 30}];
+				var reformattedArray = kvArray.map(function(obj){ 
+				   var rObj = {};
+				   rObj[obj.key] = obj.value;
+				   return rObj;
+				});
+				//console.log(reformattedArray);
+				// reformattedArray is now [{1:10}, {2:20}, {3:30}], 
+				// kvArray is still [{key:1, value:10}, {key:2, value:20}, {key:3, value: 30}]\
+				
+
+
+				var str = '12345';
+				var yo = Array.prototype.map.call(str, function(x) {
+				  return x;
+				}).reverse().join(''); 
+
+				console.log(yo);
+				// Output: '54321'
+				// Bonus: use '===' to test if original string was a palindrome
+
+
+				// var passengers = [ ["Thomas", "Meeks"],
+    //                ["Gregg", "Pollack"],
+    //                ["Christine", "Wong"],
+    //                ["Dan", "McGaw"] ];
+				// var modifiedNames  = passengers.map(function(arrayCell) {
+				// 	return arrayCell[0] + " " + arrayCell[1];
+				// 	});
+				// console.log(modifiedNames);
+
+
+
+				// var p2 = new Promise(function(resolve, reject) {
+				//   resolve(1);
+				// });
+
+				// p2.then(function(value) {
+				//   console.log(value); // 1
+				//   return value + 1;
+				// }).then(function(value) {
+				//   console.log(value); // 2
+				//  }).then(function(value) {
+				//   console.log(value); // 2
+				// });
+
+				// p2.then(function(value) {
+				//   console.log(value); // 1
+				// });
+
+
+
+				function mystery() {
+				  var secret = 6;
+				  function mystery2(multiplier) {
+				    multiplier *= 3;
+				    return secret * multiplier;
+				  }
+				  return mystery2;
+				}
+
+				var hidden = mystery();
+				var result = hidden(3);
+				console.log(result);
+
+
+////
+
+	function mystery(input) {
+  var secret = 4;
+  input += 2;
+  function mystery2(multiplier) {
+    multiplier *= input;
+    return secret * multiplier;
+  }
+  return mystery2;
+}
+
+function mystery3(param) {
+  function mystery4(bonus) {
+    return param(6) + bonus;
+  }
+  return mystery4;
+}
+
+var hidden = mystery(3);
+var jumble = mystery3(hidden);
+var result = jumble(2);
+
+
+		</script>
+	</head>
+	<body>
+		
+
+
+
+	</body>
+</html>
