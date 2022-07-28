@@ -1,4 +1,4 @@
-# SQL-in-30-Days 
+# <img src="https://media.giphy.com/media/EK5nB6wQKKN86j7GWx/giphy.gif" width="60"> SQL-in-30-Days 
 
 *In this repo, we’ll cover everything you need to be proficient enough to comfortably use SQL in your applications or in performing data analysis. And the good news is, there are hardly any prerequisites to get started—you don’t have to have previous coding skills, you just need a computer and I’ll help you get your first database up and running.*
 
