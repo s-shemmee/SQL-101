@@ -175,6 +175,7 @@ WHERE condition;
 ```
 
 This statement deletes the rows from `table_name` that match the specified condition.
+Tip: Check the rows with SELECT and WHERE first so you don't delete the wrong data.
 
 **Note:** Modifying data in a database should be done with caution, as it can permanently alter or remove data. Always double-check your statements and ensure they are targeting the correct data before executing them.
 
